@@ -2,128 +2,165 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>روان | تصميم مواقع تبهر وتبيع</title>
+  <title>روان - تصميم مواقع</title>
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@500;700&display=swap" rel="stylesheet">
-  <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet" />
   <style>
-    * {margin: 0; padding: 0; box-sizing: border-box; font-family: 'Cairo', sans-serif;}
-    body {
-      background: black;
-      color: white;
-      overflow-x: hidden;
-    }
-    .top-bar {
-      background: linear-gradient(90deg, #00eaff, #ae00ff);
-      padding: 0.5rem 1rem;
-      text-align: center;
-      font-size: 0.95rem;
-      position: relative;
-      z-index: 2;
-    }
-    .top-bar a {
-      color: white;
-      text-decoration: none;
-      margin: 0 0.8rem;
-    }
-    .hero {
-      position: relative;
-      background: linear-gradient(to bottom, #0f0f2f, #000);
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      text-align: center;
-      overflow: hidden;
-    }
-    .splash {
-      position: absolute;
-      width: 400px;
-      height: 400px;
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(255,255,255,0.1), transparent);
-      filter: blur(80px);
-      z-index: 0;
-    }
-    .splash.blue { top: 10%; left: 20%; background-color: #00eaff44; }
-    .splash.purple { bottom: 15%; right: 20%; background-color: #ae00ff44; }
-    .splash.white { top: 50%; right: 35%; background-color: #ffffff22; }
-    .hero-content {
-      position: relative;
-      z-index: 1;
-    }
-    .hero h1 {
-      font-size: 2.5rem;
-      background: linear-gradient(90deg, #00eaff, #ae00ff);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      margin-bottom: 1rem;
-    }
-    .bubbles {
-      display: inline-block;
-      padding: 1.2rem 2rem;
-      border-radius: 50px;
-      background: rgba(255,255,255,0.05);
-      border: 1px solid rgba(255,255,255,0.1);
-      margin: 0.5rem auto;
-      box-shadow: 0 0 12px #ae00ff55;
-      max-width: 90%;
-    }
-    .typewriter {
-      font-size: 1.2rem;
-      color: #ae00ff;
-      margin: 1rem 0;
-      min-height: 1.5em;
-    }
-    .cta-button {
-      background: none;
-      border: 2px solid #ae00ff;
-      padding: 0.8rem 2rem;
-      color: white;
-      font-size: 1rem;
-      border-radius: 40px;
-      cursor: pointer;
-      margin-top: 2rem;
-      animation: pulse 2s infinite;
-      text-decoration: none;
-      display: inline-block;
-    }
-    @keyframes pulse {
-      0%, 100% { transform: scale(1); }
-      50% { transform: scale(1.05); }
-    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Cairo', sans-serif;
+    }body {
+  background: linear-gradient(to bottom, #091143 50%, #000000 50%);
+  color: white;
+  overflow-x: hidden;
+}
+
+header {
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: flex-start;
+  gap: 1.5rem;
+  background: transparent;
+  position: relative;
+  z-index: 2;
+}
+
+header a {
+  color: #ccc;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.3s;
+}
+
+header a:hover {
+  color: #fff;
+}
+
+.hero {
+  position: relative;
+  text-align: center;
+  padding: 4rem 2rem 6rem;
+  z-index: 2;
+}
+
+.hero h1 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  background: linear-gradient(to right, #00eaff, #ae00ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.boxes {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.box {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 1.5rem;
+  width: 300px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 15px rgba(174, 0, 255, 0.3);
+}
+
+.cta-wrapper {
+  position: relative;
+  display: inline-block;
+  margin-top: 2rem;
+}
+
+.cta-button {
+  background: none;
+  border: 2px solid #ae00ff;
+  color: #fff;
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  border-radius: 50px;
+  cursor: pointer;
+  z-index: 2;
+  position: relative;
+}
+
+.pulse-ring {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(174,0,255,0.3) 0%, transparent 70%);
+  animation: pulse 2s infinite;
+  z-index: 1;
+}
+
+@keyframes pulse {
+  0% { transform: translate(-50%, -50%) scale(1); opacity: 0.6; }
+  50% { transform: translate(-50%, -50%) scale(1.2); opacity: 0.3; }
+  100% { transform: translate(-50%, -50%) scale(1); opacity: 0.6; }
+}
+
+.blobs {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.blob {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, transparent 70%);
+  filter: blur(60px);
+  animation: float 20s infinite ease-in-out;
+}
+
+.blob.blue { background: radial-gradient(circle, rgba(0, 187, 255, 0.5) 0%, transparent 70%); top: 10%; left: 10%; }
+.blob.purple { background: radial-gradient(circle, rgba(174, 0, 255, 0.5) 0%, transparent 70%); top: 20%; right: 10%; }
+.blob.white { background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 0%, transparent 70%); top: 0%; left: 40%; }
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(20px); }
+}
+
   </style>
 </head>
 <body>
-  <div class="top-bar">تابعني على <a href="#">إنستغرام</a> | <a href="#">واتساب</a></div>  <section class="hero">
-    <div class="splash blue"></div>
-    <div class="splash purple"></div>
-    <div class="splash white"></div><div class="hero-content">
-  <h1>استكشف المستقبل الرقمي</h1>
-  <div class="typewriter">مواقع تُبهر.. تصاميم تبيع</div>
-  <div class="bubbles">أعمالك تستحق الواجهة التي تليق بها</div>
-  <a href="#portfolio" class="cta-button">هنا تجد أعمالي</a>
+  <header>
+    <a href="https://t.me/yourhandle" target="_blank">تلغرام</a>
+    <a href="https://instagram.com/yourhandle" target="_blank">انستغرام</a>
+  </header>  <div class="blobs">
+    <div class="blob blue"></div>
+    <div class="blob purple"></div>
+    <div class="blob white"></div>
+  </div>  <section class="hero">
+    <h1>هل تبحث عن موقع يُبهر جمهورك؟</h1>
+    <div class="boxes">
+      <div class="box">
+        أنا روان، أصمم مواقع تنبض بالحياة وتأسر العيون من أول نقرة.
+      </div>
+      <div class="box">
+        أحصل على <br>
+        تصاميم تتجاوز المألوف، بأسلوب بصري مستقبلي يخدم هويتك.
+      </div>
+    </div><div class="cta-wrapper">
+  <div class="pulse-ring"></div>
+  <button class="cta-button">اكتشف أعمالي</button>
 </div>
 
-  </section>  <section id="portfolio" style="padding: 4rem 2rem; text-align: center;">
-    <h2 style="font-size: 2rem; color: #00eaff; margin-bottom: 2rem;">نماذج من أعمالي</h2>
-    <div style="display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center;">
-      <div style="background: #1b1e39; padding: 1.5rem; border-radius: 15px; width: 280px; box-shadow: 0 0 20px #ae00ff33;">
-        <h3 style="color: #00eaff; margin-bottom: 0.5rem;">رؤية مبتكرة</h3>
-        <p style="color: #ccc;">تصاميم تتجاوز المألوف، بأسلوب بصري مستقبلي يخدم هويتك.</p>
-      </div>
-      <div style="background: #1b1e39; padding: 1.5rem; border-radius: 15px; width: 280px; box-shadow: 0 0 20px #ae00ff33;">
-        <h3 style="color: #00eaff; margin-bottom: 0.5rem;">أثر ملموس</h3>
-        <p style="color: #ccc;">مواقع تخلق تجربة جذابة للمستخدم وتزيد من احترافيتك الرقمية.</p>
-      </div>
-    </div>
-  </section>  <footer style="text-align: center; padding: 2rem; background: #0a0f2c; font-size: 0.9rem; color: #ccc;">
-    &copy; 2025 روان - جميع الحقوق محفوظة<br>
-    تواصل معي عبر:
-    <a href="mailto:your@email.com" style="color: #00eaff;">الإيميل</a> |
-    <a href="https://wa.me/966XXXXXXXXX" style="color: #00eaff;">واتساب</a> |
-    <a href="https://www.instagram.com/username" style="color: #00eaff;">إنستغرام</a>
-  </footer>  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>  <script>
-    AOS.init();
-  </script></body>
-          </html>
+  </section>
+</body>
+</html>
