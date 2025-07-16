@@ -2,201 +2,216 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>استكشف المستقبل معي</title>
+  <title>روان | تصميم مواقع تبهر وتبيع</title>
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@500;700&display=swap" rel="stylesheet">
   <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet" />
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Cairo', sans-serif;
-    }body {
-  background: radial-gradient(circle at center, #0a0f2c 0%, #050314 100%);
-  overflow-x: hidden;
-  color: white;
-  position: relative;
-}
-
-body::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: url('https://www.transparenttextures.com/patterns/stardust.png');
-  opacity: 0.05;
-  pointer-events: none;
-}
-
-.stars {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: url('https://raw.githubusercontent.com/JulianLaval/canvas-space/master/stars.png');
-  opacity: 0.07;
-  z-index: 0;
-}
-
-.container {
-  position: relative;
-  z-index: 1;
-  max-width: 1100px;
-  margin: auto;
-  padding: 2rem;
-  text-align: center;
-}
-
-header h1 {
-  font-size: 2rem;
-  background: linear-gradient(90deg, #00eaff, #ae00ff, #ff00c8);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-shadow: 0 0 5px #ae00ff55;
-  margin-bottom: 1.5rem;
-}
-
-.intro {
-  font-size: 1.1rem;
-  color: #ccccff;
-  margin-bottom: 2rem;
-  text-shadow: 0 0 4px #00eaff33;
-}
-
-.cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1.5rem;
-  margin-bottom: 2rem;
-}
-
-.card {
-  background: linear-gradient(145deg, #1b1e39, #131528);
-  border: 1px solid #ffffff22;
-  padding: 1.2rem;
-  border-radius: 15px;
-  box-shadow: 0 0 10px #ae00ff33;
-  transition: transform 0.3s ease;
-}
-
-.card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 0 20px #ff00c844;
-}
-
-.card h3 {
-  font-size: 1.3rem;
-  margin-bottom: 0.5rem;
-  color: #00eaff;
-}
-
-.card p {
-  font-size: 1.05rem;
-  color: #ddddff;
-}
-
-.cta-button {
-  background: linear-gradient(to right, #00eaff, #ae00ff);
-  border: none;
-  padding: 0.75rem 1.8rem;
-  border-radius: 40px;
-  font-size: 1rem;
-  color: white;
-  cursor: pointer;
-  box-shadow: 0 0 12px #ae00ff55;
-  transition: background 0.3s ease, transform 0.2s ease;
-  margin-bottom: 3rem;
-  animation: pulse 3s infinite;
-}
-
-.cta-button:hover {
-  background: linear-gradient(to right, #ae00ff, #ff00c8);
-  box-shadow: 0 0 18px #ff00c866;
-  transform: scale(1.05);
-}
-
-@keyframes pulse {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.05); }
-}
-
-.extras {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  margin-top: 3rem;
-  gap: 1.5rem;
-}
-
-.extras div {
-  flex: 1;
-  min-width: 250px;
-  background-color: rgba(255, 255, 255, 0.02);
-  padding: 1rem;
-  border-radius: 10px;
-  border: 1px solid #ffffff11;
-  box-shadow: 0 0 8px #00eaff22;
-}
-
-.extras h4 {
-  font-size: 1.1rem;
-  margin-bottom: 0.5rem;
-  color: #ae00ff;
-}
-
-.extras p {
-  font-size: 0.95rem;
-  color: #ddddff;
-}
-
-footer {
-  margin-top: 4rem;
-  padding: 1rem;
-  background: #0c0c1f;
-  border-top: 1px solid #ffffff11;
-  font-size: 0.85rem;
-  color: #ccccff;
-  text-shadow: 0 0 4px #ae00ff33;
-}
-
+    * {margin: 0; padding: 0; box-sizing: border-box; font-family: 'Cairo', sans-serif;}
+    body {
+      background: radial-gradient(circle at center, #0a0f2c 0%, #050314 100%);
+      overflow-x: hidden;
+      color: white;
+      position: relative;
+    }
+    canvas#space {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 0;
+      pointer-events: none;
+    }
+    .container {
+      position: relative;
+      z-index: 1;
+      max-width: 1100px;
+      margin: auto;
+      padding: 2rem;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 2.2rem;
+      background: linear-gradient(90deg, #00eaff, #ae00ff, #ff00c8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 0 0 5px #ae00ff55;
+      margin-bottom: 1rem;
+    }
+    .intro {
+      font-size: 1.2rem;
+      color: #ccccff;
+      margin-bottom: 1rem;
+      text-shadow: 0 0 4px #00eaff33;
+    }
+    #typewriter {
+      font-size: 1.2rem;
+      color: #ae00ff;
+      margin-bottom: 2rem;
+      height: 30px;
+    }
+    .cta-button {
+      background: linear-gradient(to right, #00eaff, #ae00ff);
+      border: none;
+      padding: 0.75rem 1.8rem;
+      border-radius: 40px;
+      font-size: 1rem;
+      color: white;
+      cursor: pointer;
+      box-shadow: 0 0 12px #ae00ff55;
+      transition: background 0.3s ease, transform 0.2s ease;
+      margin-bottom: 3rem;
+      animation: pulse 3s infinite;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .cta-button:hover {
+      background: linear-gradient(to right, #ae00ff, #ff00c8);
+      transform: scale(1.05);
+    }
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
+    .section-title {
+      font-size: 1.6rem;
+      color: #00eaff;
+      margin-bottom: 1rem;
+      margin-top: 2rem;
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    .card {
+      background: linear-gradient(145deg, #1b1e39, #131528);
+      border: 1px solid #ffffff22;
+      padding: 1.2rem;
+      border-radius: 15px;
+      box-shadow: 0 0 10px #ae00ff33;
+      transition: transform 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 0 20px #ff00c844;
+    }
+    .card h3 {font-size: 1.3rem; color: #00eaff; margin-bottom: 0.5rem;}
+    .card p {font-size: 1.05rem; color: #ddddff;}
+    footer {
+      margin-top: 4rem;
+      padding: 1rem;
+      background: #0c0c1f;
+      border-top: 1px solid #ffffff11;
+      font-size: 0.9rem;
+      color: #ccccff;
+      text-shadow: 0 0 4px #ae00ff33;
+    }
+    footer a {
+      color: #00eaff;
+      text-decoration: none;
+      margin: 0 0.5rem;
+    }
+    footer a:hover {text-decoration: underline;}
   </style>
 </head>
 <body>
-  <div class="stars"></div>
+
+  <!-- خلفية نجوم متحركة -->
+  <canvas id="space"></canvas>
+
   <div class="container">
     <header data-aos="fade-down">
-      <h1>استكشف مستقبل موقعك معي</h1>
-      <p class="intro">انطلق بتصميم يأخذك إلى بُعد جديد... حيث يلتقي الخيال بالتقنية</p>
-    </header><section class="cards" data-aos="fade-up">
-  <div class="card" data-aos="zoom-in" data-aos-delay="100">
-    <h3>رؤية مبتكرة</h3>
-    <p>تصاميم تتجاوز المألوف، بأسلوب بصري مستقبلي يخدم هويتك.</p>
-  </div>
-  <div class="card" data-aos="zoom-in" data-aos-delay="300">
-    <h3>أثر ملموس</h3>
-    <p>مواقع تخلق تجربة جذابة للمستخدم وتزيد من احترافيتك الرقمية.</p>
-  </div>
-</section>
+      <h1>هل تبحث عن موقع يُبهر جمهورك؟</h1>
+      <p class="intro">أنا روان، أصمم مواقع تنبض بالحياة وتأسر العيون من أول نقرة.</p>
+      <div id="typewriter"></div>
+      <a href="#portfolio" class="cta-button" data-aos="zoom-in">هنا تجد أعمالي</a>
+    </header>
 
-<button class="cta-button" data-aos="fade-up">هنا تجد أعمالي</button>
+    <!-- قسم الأعمال -->
+    <section id="portfolio" data-aos="fade-up">
+      <h2 class="section-title">نماذج من أعمالي</h2>
+      <div class="cards">
+        <div class="card" data-aos="zoom-in" data-aos-delay="100">
+          <h3>رؤية مبتكرة</h3>
+          <p>تصاميم تتجاوز المألوف، بأسلوب بصري مستقبلي يخدم هويتك.</p>
+        </div>
+        <div class="card" data-aos="zoom-in" data-aos-delay="300">
+          <h3>أثر ملموس</h3>
+          <p>مواقع تخلق تجربة جذابة للمستخدم وتزيد من احترافيتك الرقمية.</p>
+        </div>
+      </div>
+    </section>
 
-<div class="extras" data-aos="fade-up" data-aos-delay="400">
-  <div>
-    <h4>أسلوبي في التصميم</h4>
-    <p>أمزج بين الفن والتقنية لصنع تجربة بصرية متكاملة، ذات طابع شخصي ومبتكر.</p>
+    <footer>
+      تواصل معي عبر:
+      <a href="mailto:your@email.com">الإيميل</a> |
+      <a href="https://wa.me/966XXXXXXXXX" target="_blank">واتساب</a> |
+      <a href="https://www.instagram.com/username" target="_blank">إنستغرام</a>
+    </footer>
   </div>
-  <div>
-    <h4>لماذا تختارني؟</h4>
-    <p>لأنك لا تحتاج فقط إلى موقع... بل إلى كيان رقمي يعبّر عنك بدقة وأناقة.</p>
-  </div>
-</div>
 
-<footer>
-  ابدأ رحلتك الرقمية اليوم — المستقبل ينتظر من يجرؤ.
-</footer>
+  <!-- AOS Animation -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>AOS.init();</script>
 
-  </div>  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>  <script>AOS.init();</script></body>
+  <!-- سكربت النجوم -->
+  <script>
+    const canvas = document.getElementById("space");
+    const ctx = canvas.getContext("2d");
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    let stars = Array.from({length: 100}, () => ({
+      x: Math.random() * canvas.width,
+      y: Math.random() * canvas.height,
+      r: Math.random() * 1.5 + 0.5,
+      dx: (Math.random() - 0.5) * 0.5,
+      dy: (Math.random() - 0.5) * 0.5,
+    }));
+
+    function animateStars() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.fillStyle = "#ffffff";
+      stars.forEach(s => {
+        ctx.beginPath();
+        ctx.arc(s.x, s.y, s.r, 0, 2 * Math.PI);
+        ctx.fill();
+        s.x += s.dx;
+        s.y += s.dy;
+        if (s.x < 0 || s.x > canvas.width) s.dx *= -1;
+        if (s.y < 0 || s.y > canvas.height) s.dy *= -1;
+      });
+      requestAnimationFrame(animateStars);
+    }
+    animateStars();
+  </script>
+
+  <!-- كتابة تلقائية -->
+  <script>
+    const words = ["مواقع تنبض بالحياة", "تصاميم تتحدى الزمن", "مرحبًا بك في المستقبل"];
+    let i = 0, j = 0, current = "", isDeleting = false;
+
+    function type() {
+      if (i < words.length) {
+        if (!isDeleting && j <= words[i].length) {
+          current = words[i].substring(0, j++);
+        } else if (isDeleting && j >= 0) {
+          current = words[i].substring(0, j--);
+        }
+        document.getElementById("typewriter").textContent = current;
+
+        let speed = isDeleting ? 40 : 100;
+        if (!isDeleting && j === words[i].length) {
+          isDeleting = true;
+          speed = 1500;
+        } else if (isDeleting && j === 0) {
+          isDeleting = false;
+          i = (i + 1) % words.length;
+        }
+        setTimeout(type, speed);
+      }
+    }
+    type();
+  </script>
+</body>
 </html>
