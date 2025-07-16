@@ -1,9 +1,10 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html><html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>استكشف المستقبل معي</title>
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@500;700&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet" />
   <style>
     * {
       margin: 0;
@@ -49,13 +50,20 @@ body::before {
   text-align: center;
 }
 
-h1 {
-  font-size: 2.2rem;
+header h1 {
+  font-size: 2rem;
   background: linear-gradient(90deg, #00eaff, #ae00ff, #ff00c8);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-shadow: 0 0 5px #ae00ff55;
   margin-bottom: 1.5rem;
+}
+
+.intro {
+  font-size: 1.1rem;
+  color: #ccccff;
+  margin-bottom: 2rem;
+  text-shadow: 0 0 4px #00eaff33;
 }
 
 .cards {
@@ -86,15 +94,8 @@ h1 {
 }
 
 .card p {
-  font-size: 0.95rem;
+  font-size: 1.05rem;
   color: #ddddff;
-}
-
-.tech-quote {
-  font-size: 1rem;
-  margin: 1.5rem 0;
-  color: #bbbbff;
-  text-shadow: 0 0 3px #00eaff55;
 }
 
 .cta-button {
@@ -107,6 +108,8 @@ h1 {
   cursor: pointer;
   box-shadow: 0 0 12px #ae00ff55;
   transition: background 0.3s ease, transform 0.2s ease;
+  margin-bottom: 3rem;
+  animation: pulse 3s infinite;
 }
 
 .cta-button:hover {
@@ -115,14 +118,9 @@ h1 {
   transform: scale(1.05);
 }
 
-footer {
-  margin-top: 3rem;
-  padding: 1rem;
-  background: #0c0c1f;
-  border-top: 1px solid #ffffff11;
-  font-size: 0.85rem;
-  color: #ccccff;
-  text-shadow: 0 0 4px #ae00ff33;
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
 }
 
 .extras {
@@ -150,8 +148,18 @@ footer {
 }
 
 .extras p {
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   color: #ddddff;
+}
+
+footer {
+  margin-top: 4rem;
+  padding: 1rem;
+  background: #0c0c1f;
+  border-top: 1px solid #ffffff11;
+  font-size: 0.85rem;
+  color: #ccccff;
+  text-shadow: 0 0 4px #ae00ff33;
 }
 
   </style>
@@ -159,22 +167,23 @@ footer {
 <body>
   <div class="stars"></div>
   <div class="container">
-    <h1>استكشف مستقبل موقعك معي</h1><div class="cards">
-  <div class="card">
+    <header data-aos="fade-down">
+      <h1>استكشف مستقبل موقعك معي</h1>
+      <p class="intro">انطلق بتصميم يأخذك إلى بُعد جديد... حيث يلتقي الخيال بالتقنية</p>
+    </header><section class="cards" data-aos="fade-up">
+  <div class="card" data-aos="zoom-in" data-aos-delay="100">
     <h3>رؤية مبتكرة</h3>
     <p>تصاميم تتجاوز المألوف، بأسلوب بصري مستقبلي يخدم هويتك.</p>
   </div>
-  <div class="card">
+  <div class="card" data-aos="zoom-in" data-aos-delay="300">
     <h3>أثر ملموس</h3>
     <p>مواقع تخلق تجربة جذابة للمستخدم وتزيد من احترافيتك الرقمية.</p>
   </div>
-</div>
+</section>
 
-<p class="tech-quote">التقنية تفتح آفاقًا لا نهائية... اجعل حضورك الرقمي انعكاسًا لإبداعك.</p>
+<button class="cta-button" data-aos="fade-up">هنا تجد أعمالي</button>
 
-<button class="cta-button">هنا تجد أعمالي</button>
-
-<div class="extras">
+<div class="extras" data-aos="fade-up" data-aos-delay="400">
   <div>
     <h4>أسلوبي في التصميم</h4>
     <p>أمزج بين الفن والتقنية لصنع تجربة بصرية متكاملة، ذات طابع شخصي ومبتكر.</p>
@@ -189,6 +198,5 @@ footer {
   ابدأ رحلتك الرقمية اليوم — المستقبل ينتظر من يجرؤ.
 </footer>
 
-  </div>
-</body>
+  </div>  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>  <script>AOS.init();</script></body>
 </html>
