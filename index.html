@@ -2,126 +2,125 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>روان • مصممة واجهات</title>
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;700&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>روان • تصميم واجهات</title>
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
+    @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;700&display=swap');
+    * {
+      box-sizing: border-box;
+      margin: 0; padding: 0;
       font-family: 'Cairo', sans-serif;
+    }
+    body {
       background-color: #250e2c;
       color: #E0B1CB;
-      line-height: 1.8;
-      padding: 0;
-    }
-    header {
-      background-color: #BE95C4;
-      color: #250e2c;
-      padding: 20px 40px;
-      text-align: center;
-      font-size: 24px;
-      font-weight: bold;
-      letter-spacing: 1px;
-    }
-    .hero {
-      padding: 60px 20px;
-      text-align: center;
-    }
-    .hero h1 {
-      font-size: 40px;
-      color: #BE95C4;
-      margin-bottom: 15px;
-    }
-    .hero p {
-      font-size: 20px;
-      max-width: 600px;
-      margin: 0 auto;
-    }
-    .services {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       padding: 40px 20px;
-      max-width: 900px;
-      margin: 0 auto;
     }
-    .service-box {
-      background-color: #31143a;
-      padding: 20px;
-      border-radius: 12px;
+    .container {
+      background: #31143a;
+      border-radius: 20px;
+      padding: 40px 60px;
+      max-width: 700px;
+      width: 100%;
+      box-shadow: 0 8px 20px rgba(224,177,203,0.3);
+    }
+    h1 {
       text-align: center;
-      transition: transform 0.3s ease;
-    }
-    .service-box:hover {
-      transform: translateY(-5px);
-    }
-    .service-box h3 {
       color: #E0B1CB;
-      margin-bottom: 10px;
-      font-size: 20px;
+      margin-bottom: 30px;
+      font-weight: 700;
+      font-size: 36px;
     }
-    .service-box p {
-      font-size: 16px;
-      color: #d8a9c7;
+    .items {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
     }
-    .contact {
-      text-align: center;
-      margin: 50px 0;
-    }
-    .contact a {
-      background-color: #BE95C4;
-      color: #250e2c;
-      padding: 14px 30px;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 18px;
-      border-radius: 30px;
+    .item {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      background: #3c1a56;
+      padding: 20px 30px;
+      border-radius: 15px;
       transition: background 0.3s ease;
+      cursor: default;
     }
-    .contact a:hover {
-      background-color: #E0B1CB;
+    .item:hover {
+      background: #BE95C4;
+      color: #250e2c;
     }
-    footer {
-      text-align: center;
-      padding: 20px;
-      font-size: 14px;
-      color: #BE95C4;
-      border-top: 1px solid #BE95C4;
+    .circle {
+      min-width: 50px;
+      min-height: 50px;
+      background-color: #E0B1CB; /* وردي */
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: 700;
+      font-size: 20px;
+      color: #250e2c;
+      user-select: none;
+      box-shadow: 0 0 8px #E0B1CB;
+      transition: background 0.3s ease, box-shadow 0.3s ease;
+    }
+    .item:hover .circle {
+      background-color: #BE95C4;
+      box-shadow: 0 0 12px #BE95C4;
+      color: #250e2c;
+    }
+    .text {
+      font-size: 18px;
+      line-height: 1.4;
+      flex: 1;
+    }
+    @media (max-width: 480px) {
+      .container {
+        padding: 30px 20px;
+      }
+      h1 {
+        font-size: 28px;
+      }
+      .item {
+        padding: 15px 20px;
+        gap: 15px;
+      }
+      .circle {
+        min-width: 40px;
+        min-height: 40px;
+        font-size: 18px;
+      }
     }
   </style>
 </head>
 <body>
 
-  <header>روان • تصميم واجهات احترافية</header>
-
-  <section class="hero">
-    <h1>أهلاً، أنا روان 👩‍💻</h1>
-    <p>
-      أُحول الأفكار إلى تصاميم أنيقة وبسيطة.  
-      أصمم صفحات هبوط ومواقع تعريفية باستخدام HTML و CSS بأسلوب بصري يجذب ويُقنع.
-    </p>
-  </section>
-
-  <section class="services">
-    <div class="service-box">
-      <h3>تصميم صفحات هبوط</h3>
-      <p>أصنع Landing Pages جذابة تُحسن من تفاعل الزوار وتحويلهم لعملاء.</p>
+  <div class="container">
+    <h1>خدماتي المميزة</h1>
+    <div class="items">
+      <div class="item">
+        <div class="circle">1</div>
+        <div class="text">تصميم صفحات هبوط تجذب الانتباه وتحول الزوار لعملاء.</div>
+      </div>
+      <div class="item">
+        <div class="circle">2</div>
+        <div class="text">إنشاء مواقع تعريفية بسيطة وسهلة التصفح للشركات الصغيرة.</div>
+      </div>
+      <div class="item">
+        <div class="circle">3</div>
+        <div class="text">تحسين تجربة المستخدم مع تصاميم أنيقة وواضحة.</div>
+      </div>
+      <div class="item">
+        <div class="circle">4</div>
+        <div class="text">تطوير واجهات متجاوبة تناسب جميع الأجهزة والشاشات.</div>
+      </div>
     </div>
-    <div class="service-box">
-      <h3>مواقع أعمال شخصية</h3>
-      <p>مواقع تعريفية بسيطة لأصحاب المشاريع الصغيرة والمستقلين.</p>
-    </div>
-    <div class="service-box">
-      <h3>تجربة مستخدم مميزة</h3>
-      <p>تصاميم تركز على البساطة والوضوح، لتجعل التفاعل مع الموقع سهل وجذاب.</p>
-    </div>
-  </section>
-
-  <section class="contact">
-    <a href="https://t.me/YOUR_USERNAME" target="_blank">تواصل معي على تيليجرام</a>
-  </section>
-
-  <footer>© روان 2025 • جميع الحقوق محفوظة</footer>
+  </div>
 
 </body>
 </html>
