@@ -1,126 +1,108 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<!DOCTYPE html><html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>روان • تصميم واجهات</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>روان • المصممة</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;700&display=swap');
-    * {
-      box-sizing: border-box;
-      margin: 0; padding: 0;
-      font-family: 'Cairo', sans-serif;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
-      background-color: #250e2c;
+      font-family: 'Cairo', sans-serif;
+      background: linear-gradient(to bottom, #0f0018, #250e2c);
       color: #E0B1CB;
-      min-height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 40px 20px;
+      overflow-x: hidden;
     }
-    .container {
-      background: #31143a;
-      border-radius: 20px;
-      padding: 40px 60px;
-      max-width: 700px;
-      width: 100%;
-      box-shadow: 0 8px 20px rgba(224,177,203,0.3);
-    }
-    h1 {
+    header {
+      background-color: #1d0129;
+      padding: 20px;
       text-align: center;
       color: #E0B1CB;
-      margin-bottom: 30px;
-      font-weight: 700;
-      font-size: 36px;
+      font-size: 24px;
+      font-weight: bold;
     }
-    .items {
-      display: flex;
-      flex-direction: column;
-      gap: 25px;
+    .hero {
+      padding: 60px 20px;
+      text-align: center;
     }
-    .item {
-      display: flex;
-      align-items: center;
-      gap: 20px;
-      background: #3c1a56;
-      padding: 20px 30px;
-      border-radius: 15px;
-      transition: background 0.3s ease;
-      cursor: default;
+    .hero h1 {
+      font-size: 42px;
+      background: linear-gradient(90deg, #BE95C4, #E0B1CB);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 10px;
     }
-    .item:hover {
-      background: #BE95C4;
-      color: #250e2c;
-    }
-    .circle {
-      min-width: 50px;
-      min-height: 50px;
-      background-color: #E0B1CB; /* وردي */
-      border-radius: 50%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-weight: 700;
-      font-size: 20px;
-      color: #250e2c;
-      user-select: none;
-      box-shadow: 0 0 8px #E0B1CB;
-      transition: background 0.3s ease, box-shadow 0.3s ease;
-    }
-    .item:hover .circle {
-      background-color: #BE95C4;
-      box-shadow: 0 0 12px #BE95C4;
-      color: #250e2c;
-    }
-    .text {
+    .hero p {
+      color: #ccc;
       font-size: 18px;
-      line-height: 1.4;
-      flex: 1;
     }
-    @media (max-width: 480px) {
-      .container {
-        padding: 30px 20px;
-      }
-      h1 {
-        font-size: 28px;
-      }
-      .item {
-        padding: 15px 20px;
-        gap: 15px;
-      }
-      .circle {
-        min-width: 40px;
-        min-height: 40px;
-        font-size: 18px;
-      }
+    .sections {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      padding: 40px 20px;
+    }
+    .card {
+      background-color: #310c3a;
+      padding: 20px;
+      width: 300px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(190, 149, 196, 0.3);
+    }
+    .card h3 {
+      color: #BE95C4;
+      margin-bottom: 10px;
+    }
+    .card p {
+      font-size: 16px;
+      color: #e0b1cb;
+    }
+    .cta {
+      text-align: center;
+      margin: 40px 0;
+    }
+    .cta a {
+      background-color: #BE95C4;
+      color: #250e2c;
+      text-decoration: none;
+      padding: 14px 28px;
+      font-weight: bold;
+      border-radius: 30px;
+      font-size: 18px;
+      transition: background 0.3s;
+    }
+    .cta a:hover {
+      background-color: #E0B1CB;
+    }
+    .tech-text {
+      text-align: center;
+      font-size: 20px;
+      margin: 30px 0;
+      color: #a9f0ff;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #999;
+      font-size: 14px;
     }
   </style>
 </head>
-<body>
-
-  <div class="container">
-    <h1>خدماتي المميزة</h1>
-    <div class="items">
-      <div class="item">
-        <div class="circle">1</div>
-        <div class="text">تصميم صفحات هبوط تجذب الانتباه وتحول الزوار لعملاء.</div>
-      </div>
-      <div class="item">
-        <div class="circle">2</div>
-        <div class="text">إنشاء مواقع تعريفية بسيطة وسهلة التصفح للشركات الصغيرة.</div>
-      </div>
-      <div class="item">
-        <div class="circle">3</div>
-        <div class="text">تحسين تجربة المستخدم مع تصاميم أنيقة وواضحة.</div>
-      </div>
-      <div class="item">
-        <div class="circle">4</div>
-        <div class="text">تطوير واجهات متجاوبة تناسب جميع الأجهزة والشاشات.</div>
-      </div>
+<body>  <header>روان • المصممة</header>  <section class="hero">
+    <h1>استكشف مستقبل المواقع معي</h1>
+    <p>أصمم واجهات مواقع فخمة ومؤثرة تُظهر احترافك وتبهر جمهورك.</p>
+  </section>  <section class="sections">
+    <div class="card">
+      <h3>تعريف عني</h3>
+      <p>روان، مصممة واجهات من سوريا، أحوّل الأفكار إلى تصميمات مذهلة وجذابة.</p>
     </div>
-  </div>
-
-</body>
+    <div class="card">
+      <h3>لماذا أختلف؟</h3>
+      <p>أجعل كل موقع ينبض بالحياة! أصمم لأجعل الزائر يشعر، يثق، ويبقى.</p>
+    </div>
+  </section>  <div class="tech-text">
+    التصميم الجيد هو المفتاح لصورة رقمية لا تُنسى.
+  </div>  <div class="cta">
+    <a href="https://t.me/YOUR_USERNAME" target="_blank">شاهد أعمالي</a>
+  </div>  <footer>© روان 2025 • كل الحقوق محفوظة</footer></body>
 </html>
