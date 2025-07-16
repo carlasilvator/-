@@ -3,70 +3,125 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>راوان • تصميم واجهات</title>
+  <title>روان • مصممة واجهات</title>
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;700&display=swap" rel="stylesheet">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
+      font-family: 'Cairo', sans-serif;
       background-color: #250e2c;
       color: #E0B1CB;
-      font-family: 'Cairo', sans-serif;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      padding: 40px 20px;
-      text-align: center;
-    }
-    h1 {
-      color: #BE95C4;
-      font-size: 42px;
-      margin-bottom: 20px;
-    }
-    p {
-      font-size: 20px;
-      margin-bottom: 40px;
-      max-width: 600px;
       line-height: 1.8;
+      padding: 0;
     }
-    a.button {
+    header {
       background-color: #BE95C4;
       color: #250e2c;
-      padding: 12px 28px;
+      padding: 20px 40px;
+      text-align: center;
+      font-size: 24px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+    .hero {
+      padding: 60px 20px;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 40px;
+      color: #BE95C4;
+      margin-bottom: 15px;
+    }
+    .hero p {
+      font-size: 20px;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .service-box {
+      background-color: #31143a;
+      padding: 20px;
+      border-radius: 12px;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+    .service-box:hover {
+      transform: translateY(-5px);
+    }
+    .service-box h3 {
+      color: #E0B1CB;
+      margin-bottom: 10px;
+      font-size: 20px;
+    }
+    .service-box p {
+      font-size: 16px;
+      color: #d8a9c7;
+    }
+    .contact {
+      text-align: center;
+      margin: 50px 0;
+    }
+    .contact a {
+      background-color: #BE95C4;
+      color: #250e2c;
+      padding: 14px 30px;
       text-decoration: none;
       font-weight: bold;
       font-size: 18px;
       border-radius: 30px;
-      transition: all 0.3s ease;
+      transition: background 0.3s ease;
     }
-    a.button:hover {
+    .contact a:hover {
       background-color: #E0B1CB;
-      color: #250e2c;
     }
     footer {
-      position: absolute;
-      bottom: 20px;
+      text-align: center;
+      padding: 20px;
       font-size: 14px;
       color: #BE95C4;
-    }
-    @media (max-width: 600px) {
-      h1 { font-size: 32px; }
-      p { font-size: 16px; }
+      border-top: 1px solid #BE95C4;
     }
   </style>
 </head>
 <body>
 
-  <h1>مرحبًا، أنا روان 👩‍💻</h1>
-  <p>
-    أُصمم مواقع واجهات أمامية أنيقة وبسيطة باستخدام HTML و CSS.  
-    إن كنت تبحث عن لمسة جمالية لموقعك، فأنت في المكان الصحيح.
-  </p>
+  <header>روان • تصميم واجهات احترافية</header>
 
-  <a href="https://t.me/YOUR_USERNAME" class="button" target="_blank">راسلني على Telegram</a>
+  <section class="hero">
+    <h1>أهلاً، أنا روان 👩‍💻</h1>
+    <p>
+      أُحول الأفكار إلى تصاميم أنيقة وبسيطة.  
+      أصمم صفحات هبوط ومواقع تعريفية باستخدام HTML و CSS بأسلوب بصري يجذب ويُقنع.
+    </p>
+  </section>
 
-  <footer>© روان 2025</footer>
+  <section class="services">
+    <div class="service-box">
+      <h3>تصميم صفحات هبوط</h3>
+      <p>أصنع Landing Pages جذابة تُحسن من تفاعل الزوار وتحويلهم لعملاء.</p>
+    </div>
+    <div class="service-box">
+      <h3>مواقع أعمال شخصية</h3>
+      <p>مواقع تعريفية بسيطة لأصحاب المشاريع الصغيرة والمستقلين.</p>
+    </div>
+    <div class="service-box">
+      <h3>تجربة مستخدم مميزة</h3>
+      <p>تصاميم تركز على البساطة والوضوح، لتجعل التفاعل مع الموقع سهل وجذاب.</p>
+    </div>
+  </section>
+
+  <section class="contact">
+    <a href="https://t.me/YOUR_USERNAME" target="_blank">تواصل معي على تيليجرام</a>
+  </section>
+
+  <footer>© روان 2025 • جميع الحقوق محفوظة</footer>
 
 </body>
 </html>
